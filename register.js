@@ -24,8 +24,7 @@ if ($registrationForm.length) {
                 required: true,
                 noSpace: true,
                 minlength: 3,
-
-            },
+            },                                
             username: {
                 required: true,
                 alphanumeric: true
@@ -35,10 +34,10 @@ if ($registrationForm.length) {
                 digits: true,
                 range: [18, 45]
             },
-            // mobile:{
-            //     required: true,
-            //     phoneUS: true
-            // },
+            mobile:{
+                required: true,
+                phoneUS: true
+            },
             email: {
                 required: true,
                 customEmail: true
@@ -67,7 +66,7 @@ if ($registrationForm.length) {
         },
         messages: {
             fname: {
-                required: 'Please enter first name!',
+                required: 'Please ente first name!',
                 minlength: 'Your password must consist of at least 3 characters'
             },
             lname: {
@@ -80,10 +79,9 @@ if ($registrationForm.length) {
             age:{
                 range:'Your age must be between 18-45 only '
             },
-            // mobile:
-            // {
-            //     required: 'Please enter Mobile Number!'
-            // },
+            mobile: {
+                required: 'Please enter Mobile Number!'
+            },
             email: {
                 required: 'Please enter email!',
                 email: 'Please enter valid email!'
@@ -127,8 +125,4 @@ if ($registrationForm.length) {
         }
     });
 
-    // jQuery.validator.setDefaults({
-    //     debug: true,
-    //     success: "valid"
-    //   });
 }
