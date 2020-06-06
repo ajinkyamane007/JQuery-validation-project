@@ -30,6 +30,15 @@ if ($registrationForm.length) {
                 required: true,
                 alphanumeric: true
             },
+            age:{
+                required: true,
+                digits: true,
+                range: [18, 45]
+            },
+            // mobile:{
+            //     required: true,
+            //     phoneUS: true
+            // },
             email: {
                 required: true,
                 customEmail: true
@@ -68,6 +77,13 @@ if ($registrationForm.length) {
             username: {
                 required: 'Please enter username!'
             },
+            age:{
+                range:'Your age must be between 18-45 only '
+            },
+            // mobile:
+            // {
+            //     required: 'Please enter Mobile Number!'
+            // },
             email: {
                 required: 'Please enter email!',
                 email: 'Please enter valid email!'
@@ -109,7 +125,10 @@ if ($registrationForm.length) {
         {
             this.value = firstname + "-"+ lastname;
         }
-
-        
     });
+
+    // jQuery.validator.setDefaults({
+    //     debug: true,
+    //     success: "valid"
+    //   });
 }
