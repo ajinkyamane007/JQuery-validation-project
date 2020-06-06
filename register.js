@@ -10,9 +10,9 @@ $.validator.addMethod("alphanumeric", function (value, element) {
     return this.optional(element) || /^\w+$/i.test(value);
 }, "Letters, numbers, and underscores only please");
 
-var $registrationForm = $('#registration');
-if ($registrationForm.length) {
-    $registrationForm.validate({
+
+$(document).ready(function(){
+    $('#registration').validate({
         rules: {
             fname: {
                 required: true,
@@ -116,13 +116,18 @@ if ($registrationForm.length) {
         }
     });
 
-   $("#username").focus(function () { 
+    $("#username").focus(function () { 
         var firstname = $("#fname").val();
         var lastname  = $("#lname").val();
         if( firstname && lastname && ! this.value)
         {
-            this.value = firstname + "-"+ lastname;
+            this.value = firstname + ""+ lastname;
         }
     });
+});
+ 
+   
 
-}
+  
+
+
